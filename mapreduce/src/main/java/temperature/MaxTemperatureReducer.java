@@ -14,7 +14,7 @@ public class MaxTemperatureReducer
   public void reduce(Text key, Iterable<IntWritable> values,
       Context context)
       throws IOException, InterruptedException {
-    
+    System.out.println(values);
     int maxValue = Integer.MIN_VALUE;
     for (IntWritable value : values) {
       maxValue = Math.max(maxValue, value.get());

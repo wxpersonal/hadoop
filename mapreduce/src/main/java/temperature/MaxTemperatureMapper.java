@@ -14,6 +14,19 @@ public class MaxTemperatureMapper extends Mapper<LongWritable, Text, Text, IntWr
 
     private static final int MISSING = 9999;
 
+    /**
+     * map预处理后的数据
+     * (1901, [12,23,45,14 ...])
+      */
+
+    /**
+     *
+     * @param key       1901
+     * @param value     [12,23,45,14 ...]
+     * @param context
+     * @throws IOException
+     * @throws InterruptedException
+     */
     @Override
     public void map(LongWritable key, Text value, Context context)
             throws IOException, InterruptedException {
