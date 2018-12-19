@@ -1,5 +1,4 @@
-package temperature;// cc temperature.MaxTemperature Application to find the maximum temperature in the weather dataset
-// vv temperature.MaxTemperature
+package temperature;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
@@ -7,6 +6,9 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
+/**
+ * @author weix
+ */
 public class MaxTemperature {
 
   public static void main(String[] args) throws Exception {
@@ -32,4 +34,3 @@ public class MaxTemperature {
     System.exit(job.waitForCompletion(true) ? 0 : 1);
   }
 }
-// ^^ temperature.MaxTemperature

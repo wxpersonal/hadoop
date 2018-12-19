@@ -1,5 +1,5 @@
-package temperature;// cc temperature.MaxTemperatureReducer Reducer for maximum temperature example
-// vv temperature.MaxTemperatureReducer
+package temperature;
+
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
@@ -7,6 +7,9 @@ import org.apache.hadoop.mapreduce.Reducer;
 
 import java.io.IOException;
 
+/**
+ * @author weix
+ */
 public class MaxTemperatureReducer
   extends Reducer<Text, IntWritable, Text, IntWritable> {
   
@@ -22,4 +25,3 @@ public class MaxTemperatureReducer
     context.write(key, new IntWritable(maxValue));
   }
 }
-// ^^ temperature.MaxTemperatureReducer
